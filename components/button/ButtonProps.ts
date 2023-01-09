@@ -16,9 +16,9 @@ export type ButtonProps = {
     maxWidth?: string | undefined,
     minHeight?: string | undefined,
     isEnabled?: any | undefined,
-    onClick?: (event: React.MouseEvent<HTMLDivElement>) => void | undefined,
+    onClick?: (event: React.MouseEvent<HTMLDivElement>) => void,
     ref?: () => string | undefined,
-    history?: { goBack: () => any }  | undefined,
+    history?: { goBack: () => any } | undefined,
     activeColor?: string | undefined,
     disabledColor?: string | undefined,
     activeBackgroundColor?: string | undefined,
@@ -47,13 +47,13 @@ export type ButtonProps = {
     focusCursor?: string | undefined,
     focusBoxShadow?: string | undefined,
     activeOpacity?: string | undefined,
-    fontWeight?: any  | undefined,
+    fontWeight?: any | undefined,
     showSpinner?: boolean | undefined,
     onClickArgs?: (event: React.MouseEvent<HTMLDivElement>) => void,
-    spinnerSize?:string | undefined,
-    children?:any | undefined,
-    iconScale?:string | undefined,
-    focusBackground?:string | undefined,
+    spinnerSize?: string | undefined,
+    children?: any | undefined,
+    iconScale?: string | undefined,
+    focusBackground?: string | undefined,
     iconUrl?: string | undefined
-    textPadding?:string | undefined
+    textPadding?: string | undefined
 }

@@ -1,4 +1,3 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Image } from '../general/Image'
@@ -47,18 +46,18 @@ const ToolTipHeader = styled.div`
 `;
 
 
-export default function TooltipButton(props:TooltipButtonProps) {
+export default function TooltipButton(props: TooltipButtonProps) {
   return (
     <Container position={'relative'}>
 
-    <Image
-      {...props}
-      src={Images.Icons.Tooltip}/>
+      <Image
+        {...props}
+        src={Images.Icons.Tooltip} />
 
-    { props.showTooltip &&
+      {props.showTooltip &&
 
         <Container position={'absolute'}>
-          <ToolTipTriangle/>
+          <ToolTipTriangle />
           <ToolTip
             tooltipPadding={props.tooltipPadding}
             tooltipWidth={props.tooltipWidth}
@@ -66,17 +65,17 @@ export default function TooltipButton(props:TooltipButtonProps) {
             textColor={props.textColor}
             tooltipFontSize={props.tooltipFontSize}>
 
-              <ToolTipHeader>
-                {props.tooltipTextHeader}
-              </ToolTipHeader>
+            <ToolTipHeader>
+              {props.tooltipTextHeader}
+            </ToolTipHeader>
 
-              {props.tooltipText}
+            {props.tooltipText}
 
           </ToolTip>
         </Container>
-    }
+      }
 
-  </Container>
+    </Container>
   )
 }
 
@@ -93,7 +92,7 @@ TooltipButton.defaultProps = {
   ...Image.defaultProps,
   tooltipTextHeader: 'Tooltip Text Header',
   tooltipText: 'Tooltip Text',
-  textColor:'#FFFFFF',
+  textColor: '#FFFFFF',
   width: '2vmin',
   height: '2vmin',
   tooltipPadding: '0.5vw',

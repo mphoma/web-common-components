@@ -1,13 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import  {Button } from './Button'
+import { Button } from './Button'
 import { ColorCodes, FormFactorTypes } from '../../common/constants';
 import { withFormFactor } from '../../hocs/withFormFactor';
 import { ButtonProps } from './ButtonProps';
 
-const roundButton = (props:ButtonProps) => <Button {...props} borderRadius={props.height}/>;
+const roundButton = (props: ButtonProps) => <Button {...props} borderRadius={props.height} />;
 
-roundButton.propTypes = {...Button.propTypes};
+roundButton.propTypes = { ...Button.propTypes };
 
 roundButton.defaultProps = {
   ...Button.defaultProps,

@@ -1,4 +1,3 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { ButtonProps } from './ButtonProps'
@@ -6,6 +5,7 @@ import { H3Regular } from '../text/H3'
 import { Spinner } from '../spinner/Spinner'
 import { ColorCodes } from '../../common/constants'
 import { ColorSvg } from '../general/ColorSvg'
+import React from 'react'
 
 const Container = styled.button<ButtonProps>`
   cursor: pointer;
@@ -61,7 +61,7 @@ const Container = styled.button<ButtonProps>`
   }
  `
 
- const IconContainer = styled.div`
+const IconContainer = styled.div`
   flex: 1 0 auto;
 `;
 
@@ -70,7 +70,7 @@ const TextContainer = styled.div`
   padding: 0 1vw;
 `;
 
-export const Button = React.forwardRef((props: ButtonProps, ref:any) => {
+export const Button = React.forwardRef((props: ButtonProps, ref: any) => {
 
   const buttonRef = React.useRef();
   React.useImperativeHandle(ref, () => buttonRef.current);
@@ -138,7 +138,7 @@ export const Button = React.forwardRef((props: ButtonProps, ref:any) => {
       activeOpacity={(props.isEnabled && props.activeOpacity) || undefined}
       autoFocus={props.autoFocus}>
 
-      { props.iconUrl &&
+      {props.iconUrl &&
 
         <IconContainer>
           <ColorSvg
@@ -149,14 +149,14 @@ export const Button = React.forwardRef((props: ButtonProps, ref:any) => {
         </IconContainer>
       }
 
-      { props.showSpinner &&
+      {props.showSpinner &&
 
         <Spinner
           size={props.spinnerSize}
           color={ColorCodes.CurrentColor} />
       }
 
-      { !props.showSpinner && props.text &&
+      {!props.showSpinner && props.text &&
 
         <TextContainer>
 
@@ -167,8 +167,8 @@ export const Button = React.forwardRef((props: ButtonProps, ref:any) => {
         </TextContainer>
       }
 
-      { !props.showSpinner && props.children }
-        
+      {!props.showSpinner && props.children}
+
     </Container>
   )
 });
@@ -257,14 +257,14 @@ Button.defaultProps = {
   disabledBorderColor: '#CCCCCC',
   activeColor: '#FFFFFF',
   activeBackgroundColor: '#E60000',
-  activeBorderColor:'#E60000',
+  activeBorderColor: '#E60000',
   border: undefined,
   borderRadius: '6px',
   borderTop: undefined,
   borderBottom: undefined,
   borderLeft: undefined,
   borderRight: undefined,
-  onClick: () => {},
+  onClick: () => { },
   onClickArgs: undefined,
   flex: undefined,
   margin: undefined,

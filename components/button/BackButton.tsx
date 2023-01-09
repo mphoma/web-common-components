@@ -1,9 +1,8 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { ButtonProps } from './ButtonProps'
 import { Text } from '../text/Text'
-import { FontFamilies }  from  '../../common/constants'
+import { FontFamilies } from '../../common/constants'
 import { ColorCodes, Images } from '../../common/constants'
 import { ColorSvg } from '../general/ColorSvg'
 
@@ -28,7 +27,7 @@ const Container = styled.button<ButtonProps>`
   ${props => props.maxWidth && `max-width: ${props.maxWidth};`}
 `;
 
-export const BackButton = (props:ButtonProps) =>
+export const BackButton = (props: ButtonProps) =>
 
   <Container
     height={props.height}
@@ -46,7 +45,7 @@ export const BackButton = (props:ButtonProps) =>
       src={Images.Icons.BackArrow}
       color={props.isEnabled && props.activeColor || props.disabledColor}
       height={`calc(${props.height} * 0.9)`}
-      width={`calc(${props.height} * 0.9)`}/>
+      width={`calc(${props.height} * 0.9)`} />
 
     <Text
       fontFamily={FontFamilies.VodafoneRegularEot}
@@ -58,7 +57,7 @@ export const BackButton = (props:ButtonProps) =>
     </Text>
 
   </Container>
-;
+  ;
 
 BackButton.propTypes = {
   text: PropTypes.string,

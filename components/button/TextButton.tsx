@@ -1,6 +1,4 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import  {Button } from './Button'
+import { Button } from './Button'
 import { ButtonProps } from './ButtonProps';
 
 export default function TextButton(props: ButtonProps) {
@@ -8,10 +6,10 @@ export default function TextButton(props: ButtonProps) {
     <Button {...props}></Button>
   )
 }
-TextButton.propTypes = {...Button.propTypes};
+TextButton.propTypes = { ...Button.propTypes };
 
 TextButton.defaultProps = Object.assign(
-  {...Button.defaultProps},
+  { ...Button.defaultProps },
   {
     border: '0',
     width: 'auto',

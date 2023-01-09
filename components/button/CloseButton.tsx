@@ -1,7 +1,6 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Base as Container} from '../container/Containers';
+import { Base as Container } from '../container/Containers';
 import { CloseButtonProps } from './CloseButtonProps';
 import { Image } from '../general/Image';
 import { Images } from '../../common/constants';
@@ -9,30 +8,30 @@ import { Images } from '../../common/constants';
 export default function CloseButton(props: CloseButtonProps) {
   return (
     <Container
-    display={props.display}
-    flex={props.flex}
-    justifyContent={props.alignItems}
-    alignItems={props.alignItems}
-    padding={props.padding}
-    margin={props.margin}
-    height={props.height}
-    width={props.width}
-    maxWidth={props.maxWidth}
-    minWidth={props.minWidth}
-    maxHeight={props.maxHeight}
-    minHeight={props.minHeight}
-    hoverBackgroundColor={props.hoverBackgroundColor}
-    cursor={props.cursor}
-    borderRadius={props.height}
-    onClick={() => props.onClick && props.onClick()}
+      display={props.display}
+      flex={props.flex}
+      justifyContent={props.alignItems}
+      alignItems={props.alignItems}
+      padding={props.padding}
+      margin={props.margin}
+      height={props.height}
+      width={props.width}
+      maxWidth={props.maxWidth}
+      minWidth={props.minWidth}
+      maxHeight={props.maxHeight}
+      minHeight={props.minHeight}
+      hoverBackgroundColor={props.hoverBackgroundColor}
+      cursor={props.cursor}
+      borderRadius={props.height}
+      onClick={() => props.onClick && props.onClick()}
     >
-       <Image
-      height={props.imageHeight}
-      width={props.imageWidth}
-      objectFit={props.objectFit}
-      src={props.src}/>
-      
-      </Container>
+      <Image
+        height={props.imageHeight}
+        width={props.imageWidth}
+        objectFit={props.objectFit}
+        src={props.src} />
+
+    </Container>
   )
 }
 
@@ -50,11 +49,11 @@ CloseButton.defaultProps = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  hoverBackgroundColor:'#EBEBEB',
+  hoverBackgroundColor: '#EBEBEB',
   cursor: 'pointer',
   height: '8vmin',
   width: '8vmin',
-  onClick: () => {},
+  onClick: () => { },
   imageHeight: '60%',
   imageWidth: '60%',
   objectFit: 'contain',

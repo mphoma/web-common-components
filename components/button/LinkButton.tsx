@@ -1,15 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import {Button} from './Button'
+import { Button } from './Button'
 import { ButtonProps } from './ButtonProps';
 import { ColorCodes } from '../../common/constants';
 
-export const LinkButton = (props:ButtonProps) => <Button {...props} text={`${props.text} >`}/>;
+export const LinkButton = (props: ButtonProps) => <Button {...props} text={`${props.text} >`} />;
 
-LinkButton.propTypes = {...Button.propTypes};
+LinkButton.propTypes = { ...Button.propTypes };
 
 LinkButton.defaultProps = Object.assign(
-  {...Button.defaultProps},
+  { ...Button.defaultProps },
   {
     border: '0',
     width: 'auto',

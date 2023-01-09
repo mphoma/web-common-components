@@ -1,33 +1,32 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import  {Button } from './Button'
+import { Button } from './Button'
 import { ColorCodes, FormFactorTypes } from '../../common/constants'
 import { withFormFactor } from '../../hocs/withFormFactor'
-import { ButtonProps } from './ButtonProps'
 
 interface containedButtonProps {
   activeOpacity?: string,
-  buttonRef?:any
+  buttonRef?: any
 }
 
-const containedButton = React.forwardRef((props:containedButtonProps, ref:any) => {
+const containedButton = React.forwardRef((props: containedButtonProps, ref: any) => {
   const inputRef = React.useRef();
   React.useImperativeHandle(ref, () => inputRef.current);
 
   return (
-    <Button 
-    buttonRef={inputRef} 
-    {...props}/>
+    <Button
+      buttonRef={inputRef}
+      {...props} />
   )
 })
 containedButton.displayName = 'containedButton'
 
 containedButton.propTypes = {
   ...Button.propTypes,
-  // buttonRef: PropTypes.oneOfType([
-  //   PropTypes.func,
-  //   PropTypes.shape({ current: PropTypes.instanceOf(Element) })
-  // ])
+  buttonRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) })
+  ])
 };
 
 containedButton.defaultProps = {
