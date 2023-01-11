@@ -33,4 +33,4 @@ const errorBanner : React.FunctionComponent = (props:NotificationProps) => (
         padding: '0 4.29vw',
       }
     },
-  });
+  })as unknown as React.ElementType<NotificationProps>;

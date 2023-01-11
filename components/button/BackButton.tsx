@@ -39,7 +39,8 @@ export const BackButton = (props: ButtonProps) =>
     minWidth={props.minWidth}
     maxHeight={props.maxHeight}
     maxWidth={props.maxWidth}
-    onClick={() => props.isEnabled && ((props.onClick && props.onClick()) || (props.history && props.history.goBack && props.history.goBack()))}>
+    onClick={() => props.isEnabled && ((props.onClick)
+      || (props.history && props.history.goBack && props.history.goBack()))}>
 
     <ColorSvg
       src={Images.Icons.BackArrow}

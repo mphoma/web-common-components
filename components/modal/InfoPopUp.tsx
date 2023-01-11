@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import React from 'react'
 import { Images } from '../../common/constants'
 import { PopUp } from './PopUp'

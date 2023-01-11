@@ -29,35 +29,36 @@ const CloseImage = styled(Image)`
   height: 1.5vmin;
 `;
 
+
 export const Banner = (props:NotificationProps) => {
 
-//   const parseText = (text:NotificationProps) => {
+  const parseText = (text:NotificationProps) => {
 
-//     let textLines = [];
+    let textLines : string[] = []
+    const TextComponent = (props.textLine || BodyText) as React.ElementType
 
-//     if (typeof text !== 'string') {
+    if (typeof text !== 'string') {
 
-//       return textLines;
-//     }
+      return textLines;
+    }
 
-//     let i = 0;
+    let i = 0;
 
-//     for (const line of text.split('\n')) {
+    for (const line of text.split('\n')) {
 
-//       textLines.push(
+      textLines.push(
+       <TextComponent
+          key={`banner-line-${i++}`}
+          color={props.color}
+          fontSize={props.fontSize}
+          text={line}/>
+      );
+    }
 
-//         <BodyText
-//           key={`banner-line-${i++}`}
-//           color={props.color}
-//           fontSize={props.fontSize}
-//           text={line}/>
-//       );
-//     }
+    return <React.Fragment>{textLines}</React.Fragment>;
+  };
 
-//     return textLines;
-//   };
-
-//   const textLines = parseText(props.text);
+  const textLines = parseText(props.text);
 
   return (
 
@@ -75,27 +76,28 @@ export const Banner = (props:NotificationProps) => {
       maxWidth={props.maxWidth}
       backgroundColor={props.backgroundColor}>
 
-        {/* <IconImage
-          src={props.imageUrl}/> */}
+        <IconImage
+          src={props.imageUrl}
+          />
 
         <VFillContainer
           padding={'1vh 1.59vw'}>
 
-          {/* {textLines} */}
+          {textLines}
         </VFillContainer>
 
         { props.onCloseClick &&
 
           <React.Fragment>
 
-            {/* { props.closeImageUrl &&
+           { props.closeImageUrl &&
 
               <CloseImage
                 id={`${props.id}-button`}
                 automationId={`${props.automationId}-button`}
                 src={props.closeImageUrl}
                 onClick={props.onCloseClick}/>
-            } */}
+            }
 
             { !props.closeImageUrl &&
 

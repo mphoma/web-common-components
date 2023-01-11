@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { ColorCodes } from '../../common/constants'
@@ -17,37 +16,37 @@ export const ActionCard = (props: CardProps) => (
   <Card
     {...props}>
 
-      {props.children}
+    {props.children}
 
-      { props.showSeperator &&
+    {props.showSeperator &&
 
-        <HSeparator
-          color={ColorCodes.Grey3}/>
+      <HSeparator
+        color={ColorCodes.Grey3} />
+    }
+
+    <Buttons>
+
+      <HFillContainer />
+
+      {props.onSecondaryClick &&
+
+        <TextButton
+          activeColor={ColorCodes.Grey7}
+          onClick={props.onSecondaryClick}
+          text={props.secondaryText}
+        />
       }
 
-      <Buttons>
+      {props.onPrimaryClick &&
 
-        <HFillContainer/>
+        <TextButton
+          activeColor={ColorCodes.Red3}
+          text={props.primaryText}
+          onClick={props.onPrimaryClick}
+        />
+      }
 
-        { props.onSecondaryClick &&
-
-          <TextButton
-            activeColor={ColorCodes.Grey7}
-            onClick={props.onSecondaryClick}
-            text={props.secondaryText}
-          />
-        }
-
-        { props.onPrimaryClick &&
-
-          <TextButton
-            activeColor={ColorCodes.Red3}
-            text={props.primaryText}
-            onClick={props.onPrimaryClick}
-          />
-        }
-
-      </Buttons>
+    </Buttons>
 
   </Card>
 

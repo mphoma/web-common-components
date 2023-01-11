@@ -4,7 +4,8 @@ import { ColorCodes, FormFactorTypes, Images } from '../../common/constants'
 import { withFormFactor } from '../../hocs/withFormFactor'
 import { ButtonProps } from './ButtonProps'
 
-const iconButton = (props: ButtonProps) => <Button {...props} borderRadius={props.height} />;
+const iconButton = (props: ButtonProps) =>
+ <Button {...props} borderRadius={props.height} />;
 
 iconButton.propTypes = { ...Button.propTypes };
 
@@ -28,4 +29,4 @@ export const IconButton = withFormFactor({
       focusBorderColor: ColorCodes.Grey5,
     },
   },
-});
+})as unknown as React.ElementType<ButtonProps>;

@@ -29,4 +29,4 @@ export const GeneralSnackbar = withFormFactor({
       padding: '0 0 4.44vh 5.20vw',
     },
   },
-});
+})as unknown as React.ElementType<NotificationProps>;

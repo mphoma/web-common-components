@@ -58,10 +58,10 @@ export const Snackbar = (props: NotificationProps) => {
 
       textLines.push(
 
-        // <BodyText
-        //   key={`snackbar-line-${i++}`}
-        //   color={props.color}
-        //   text={line}/> 
+        <BodyText
+          key={`snackbar-line-${i++}`}
+          color={props.color}
+          text={line}/> 
       );
     }
 

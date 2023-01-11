@@ -31,4 +31,4 @@ export const RoundButton = withFormFactor({
       height: '24px',
     },
   },
-});
+})as unknown as React.ElementType<ButtonProps>;

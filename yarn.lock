@@ -5075,6 +5075,13 @@
   "resolved" "http://artifactory.orbit.vodacom.aws.corp/artifactory/api/npm/vod-npm/dom-walk/-/dom-walk-0.1.2.tgz"
   "version" "0.1.2"
 
+"dom7@^4.0.4":
+  "integrity" "sha1-i2jF2OXi7Q/dscuT5DO8kGDI8/s="
+  "resolved" "http://artifactory.orbit.vodacom.aws.corp/artifactory/api/npm/vod-npm/dom7/-/dom7-4.0.4.tgz"
+  "version" "4.0.4"
+  dependencies:
+    "ssr-window" "^4.0.0"
+
 "domain-browser@^1.1.1":
   "integrity" "sha1-PTH1AZGmdJ3RN1p/Ui6CPULlTto="
   "resolved" "http://artifactory.orbit.vodacom.aws.corp/artifactory/api/npm/vod-npm/domain-browser/-/domain-browser-1.2.0.tgz"
@@ -10203,6 +10210,11 @@
   "resolved" "http://artifactory.orbit.vodacom.aws.corp/artifactory/api/npm/vod-npm/sprintf-js/-/sprintf-js-1.0.3.tgz"
   "version" "1.0.3"
 
+"ssr-window@^4.0.0", "ssr-window@^4.0.2":
+  "integrity" "sha1-3Gs+43voasDj3cYAMPezvJuFU74="
+  "resolved" "http://artifactory.orbit.vodacom.aws.corp/artifactory/api/npm/vod-npm/ssr-window/-/ssr-window-4.0.2.tgz"
+  "version" "4.0.2"
+
 "ssri@^6.0.1":
   "integrity" "sha1-FXk5E08gRk5zAd26PpD/qPdyisU="
   "resolved" "http://artifactory.orbit.vodacom.aws.corp/artifactory/api/npm/vod-npm/ssri/-/ssri-6.0.2.tgz"
@@ -10488,6 +10500,14 @@
   "integrity" "sha1-btpL00SjyUrqN21MwxvHcxEDngk="
   "resolved" "http://artifactory.orbit.vodacom.aws.corp/artifactory/api/npm/vod-npm/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   "version" "1.0.0"
+
+"swiper@^8.4.5":
+  "integrity" "sha1-FJyoH2c5PT8zq93Q+Wj8N+mZgLU="
+  "resolved" "http://artifactory.orbit.vodacom.aws.corp/artifactory/api/npm/vod-npm/swiper/-/swiper-8.4.5.tgz"
+  "version" "8.4.5"
+  dependencies:
+    "dom7" "^4.0.4"
+    "ssr-window" "^4.0.2"
 
 "symbol.prototype.description@^1.0.0":
   "integrity" "sha1-0w4BJjtgIPu9LSiEpids5NSatWg="

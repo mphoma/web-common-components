@@ -26,4 +26,4 @@ const warningBanner: React.FunctionComponent<NotificationProps> = props => (
         padding: '0 4.29vw',
       }
     },
-  });
+  })as unknown as React.ElementType<NotificationProps>;

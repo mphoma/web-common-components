@@ -1,5 +1,7 @@
+import { string } from "prop-types"
+
 export type NotificationProps = {
-    id?: string | undefined,
+    id?: any | undefined,
     automationId?: string | undefined,
     backgroundColor?: string | undefined,
     imageUrl?: string | undefined,
@@ -17,7 +19,7 @@ export type NotificationProps = {
     onCloseClick?: (event: React.MouseEvent<HTMLDivElement>) => void,
     closeImageUrl?: string | undefined,
     closeText?: string | undefined,
-    src?: any | undefined,
+    src?: any ,
     position?: string | undefined,
     left?: string | undefined,
     top?: string | undefined,
@@ -28,5 +30,7 @@ export type NotificationProps = {
     heading?: string| undefined,
     key?: string | undefined,
     text?:string | undefined,
-    onClick?: (event: React.MouseEvent<HTMLDivElement>) => void,
+    onClick?: (event: React.MouseEvent<HTMLDivElement> ) => void,
+    textLine?: React.ReactNode
+
 }

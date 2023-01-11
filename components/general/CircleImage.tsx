@@ -17,6 +17,7 @@ export const CircleImage = styled.div<CircleImageProps>`
   background-size: 
       ${props => props.imageWidth || '10vh'}
       ${props => props.imageHeight || '10vh'};
+  background-color: ${props => props.backgroundColor || transparent(ColorCodes.Grey5, 0.6)};
   background-position: center;
   border-radius: 50%;
   height: ${props => props.height || props.width || '20vh'};

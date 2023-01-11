@@ -36,4 +36,4 @@ export const OutlineButton = withFormFactor({
       focusBoxShadow: `0 0 0 1px ${ColorCodes.Red1}`,
     },
   },
-});
+})as unknown as React.ElementType<ButtonProps>;

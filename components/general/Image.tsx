@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { ImageProps } from './ImageProps'
+import { GeneralProps } from './GeneralProps'
 
-const Img = styled.img<ImageProps>`
+const Img = styled.img<GeneralProps>`
   width: ${props => props.width || '5vh'};
   height: ${props => props.height || '5vh'};
 
@@ -17,7 +17,7 @@ const Img = styled.img<ImageProps>`
   ${props => props.alignSelf && `align-self: ${props.alignSelf};`}
 `
 
-export const Image = (props:ImageProps) => {
+export const Image = (props:GeneralProps) => {
 
   const [
     shouldFallback,
