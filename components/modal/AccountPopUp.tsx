@@ -1,15 +1,12 @@
-import React from 'react'
-import { Images } from '../../common/constants'
-import { PopUp } from './PopUp'
+import
+  React
+  from 'react';
+import { Images } from '../../common/constants';
+import { PopUp } from './PopUp';
 import { PopUpProps } from './PopUpProps';
 
-export const AccountPopUp = (props:PopUpProps) => <PopUp {...props}/>;
-
-AccountPopUp.propTypes = {
-  ...PopUp.propTypes
-};
+export const AccountPopUp = (props :PopUpProps) => <PopUp {...props}/>;
 
 AccountPopUp.defaultProps = {
-  ...PopUp.defaultProps,
   icon: Images.Icons.User,
 };

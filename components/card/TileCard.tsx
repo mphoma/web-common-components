@@ -49,7 +49,7 @@ export const TileCard = ( props:CardProps ) => {
 
       <Image
         src={props.image}
-        // alt={'...'}
+        alt={'...'}
         width={props.imageWidth}
         height={props.imageHeight}
         objectFit={props.imageObjectFit}/>
@@ -79,9 +79,9 @@ export const TileCard = ( props:CardProps ) => {
               </TextStyled>
             : <TextStyled
                 textMargin={props.textMargin}
-                // dangerouslySetInnerHTML={{
-                //   __html: props.text
-                // }}
+                dangerouslySetInnerHTML={{
+                  __html: props.text
+                }}
                  />
         }
       </VContainer>

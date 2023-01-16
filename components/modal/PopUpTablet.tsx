@@ -12,6 +12,7 @@ import { BodyText } from '../text/BodyText'
 import { H2 } from '../text/H2'
 import { HSeparator } from '../general/Separator'
 import { PopUpProps } from './PopUpProps'
+import { Space } from '../general/Space'
 
 const Container = styled.div`
   box-sizing: border-box;
@@ -145,7 +146,7 @@ export const PopUpTablet = (props:PopUpProps) => (
 
           </Buttons>
 
-          {/* <Space height={'2.5vh'}/> */}
+          <Space height={'2.5vh'}/>
 
         </React.Fragment>
     }

@@ -10,6 +10,7 @@ import { BackButton } from '../button/BackButton'
 import { TextList } from '../text/TextList'
 import { BodyText } from '../text/BodyText'
 import { H2 } from '../text/H2'
+import { Space } from '../general/Space'
 import { PopUpProps } from './PopUpProps'
 
 const Container = styled.div`
@@ -132,9 +133,9 @@ export const PopUpMobi = (props:PopUpProps) => (
         </React.Fragment>
       }
 
-      {/* <Space
+      <Space
         height={'5vh'}
-      /> */}
+      />
 
     </Buttons>
 

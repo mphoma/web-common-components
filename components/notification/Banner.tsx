@@ -64,7 +64,7 @@ export const Banner = (props:NotificationProps) => {
 
     <Container
       id={props.id}
-    //   automationId={props.automationId}
+      automationId={props.automationId}
       height={props.height}
       width={props.width}
       flex={props.flex}

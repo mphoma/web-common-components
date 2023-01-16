@@ -11,4 +11,5 @@ export type PopUpProps = {
     secondaryText?:any,
     onPrimaryClick?: (event: React.MouseEvent<HTMLDivElement> | undefined ) => void,
     primaryText?:any,
+
 }

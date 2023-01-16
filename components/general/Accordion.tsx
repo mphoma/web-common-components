@@ -6,6 +6,8 @@ import { withFormFactor } from '../../hocs/withFormFactor';
 import { Base as BaseContainer, VContainer, HFillContainerV, VFillContainerVH } from '../container/Containers';
 import { Spinner } from '../spinner/Spinner';
 import { GeneralProps } from './GeneralProps';
+import { ContainerProps } from '../container/ContainerProps';
+import { Arrow } from './Arrow';
 
 const Container = styled(VContainer)`
   ${props => props.border && `border: ${props.border};`}
@@ -15,7 +17,7 @@ const Container = styled(VContainer)`
   ${props => props.padding && `padding: ${props.padding};`}
 `;
 
-const Header = styled(HFillContainerV)<GeneralProps>`
+const Header = styled(HFillContainerV)<ContainerProps>`
   justify-content: space-between;
   cursor: pointer;
 
@@ -42,7 +44,7 @@ const ContentContainer = styled(VContainer)`
 
 const VAnimatedContainerDesktop = (props : GeneralProps) => {
 
-  const contentContainerRef = useRef();
+  const contentContainerRef = React.useRef();
 
   return (
 
@@ -123,7 +125,7 @@ const VAnimatedContainer = withFormFactor({
       panelTransition: null,
     },
   },
-});
+})as unknown as React.ElementType<GeneralProps>;
 
 const AccordionDesktop = (props:GeneralProps) => {
 

@@ -35,23 +35,23 @@ const Container = styled.div<TabProps>`
 
 export const Tab = (props: TabProps) => {
 
-  const tabRef = React.useRef(null);
+  const tabRef = React.useRef<null | HTMLDivElement>(null);
   const color = props.active && props.activeColor || props.inactiveColor;
 
   if (props.active && tabRef.current) {
 
-    // tabRef.current.scrollIntoView();
+    tabRef.current.scrollIntoView();
   }
 
-//   const onTabClick = () => {
+  const onTabClick = () => {
 
-//     props.onTabClicked && props.onTabClicked({
-//       id: props.id,
-//       name: props.name,
-//       value: props.value,
-//       label: props.label,
-//     });
-//   };
+    props.onTabClicked && props.onTabClicked({
+      id: props.id,
+      name: props.name,
+      value: props.value,
+      label: props.label,
+    });
+  };
 
   return (
 
@@ -59,7 +59,7 @@ export const Tab = (props: TabProps) => {
       id={props.id}
       automationId={props.automationId}
       ref={tabRef}
-    //   onClick={onTabClick}
+      onClick={onTabClick}
       color={color}
       active={props.active}
       padding={props.padding}

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import { Button } from './Button'
 import { ColorCodes, FormFactorTypes, Images } from '../../common/constants'
 import { withFormFactor } from '../../hocs/withFormFactor'

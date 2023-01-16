@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Base as Container } from '../container/Containers';
-import { CloseButtonProps } from './CloseButtonProps';
+import { ButtonProps } from './ButtonProps';
 import { Image } from '../general/Image';
 import { Images } from '../../common/constants';
 
-export default function CloseButton(props: CloseButtonProps) {
+export default function CloseButton(props: ButtonProps) {
   return (
     <Container
       display={props.display}
@@ -23,7 +23,7 @@ export default function CloseButton(props: CloseButtonProps) {
       hoverBackgroundColor={props.hoverBackgroundColor}
       cursor={props.cursor}
       borderRadius={props.height}
-      onClick={() => props.onClick && props.onClick()}
+      onClick={(e) => props.onClick && props.onClick(e)}
     >
       <Image
         height={props.imageHeight}

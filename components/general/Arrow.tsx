@@ -6,8 +6,10 @@ from 'prop-types';
 import { Images } from '../../common/constants';
 import { Base } from '../container/Containers';
 import { GeneralProps } from './GeneralProps';
+import { ColorSvg } from './ColorSvg';
+import { ContainerProps } from '../container/ContainerProps';
 
-const ArrowContainer = styled(Base)<GeneralProps>`
+const ArrowContainer = styled(Base)<ContainerProps>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,7 +28,7 @@ export const Arrow = (props: GeneralProps) => (
       transition={props.transition}
       rotateX={props.rotateX}>
   
-        <ColorSvg
+        {/* <ColorSvg
           id={props.id}
           automationId={props.automationId}
           src={Images.Icons.Chevron}
@@ -38,7 +40,7 @@ export const Arrow = (props: GeneralProps) => (
           maxWidth={props.maxWidth}
           onClick={props.onClick}
           color={props.color}
-          hoverColor={props.hoverColor}/>
+          hoverColor={props.hoverColor}/> */}
   
     </ArrowContainer>
   );

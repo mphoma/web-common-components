@@ -1,6 +1,4 @@
-import {
-    ColorCodes
-  } from 'common/constants';
+import { ColorCodes } from "./constants"
   
   export const Themes = {
     PreLogin: {

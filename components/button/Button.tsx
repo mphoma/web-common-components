@@ -92,7 +92,7 @@ export const Button = React.forwardRef((props: ButtonProps, ref: any) => {
 
     <Container
       id={props.id || props.name || props.text}
-      // ref={props.buttonRef}
+      ref={props.buttonRef}
       name={props.name || props.id || props.text}
       delay={props.delay}
       automationId={props.automationId}

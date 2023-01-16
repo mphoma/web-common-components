@@ -49,14 +49,14 @@ const CardContainer = styled.div<CardProps>`
 
 export const Card = (props: CardProps) => {
 
-  const CardContainerRef = React.useRef();
+  const CardContainerRef = React.useRef<HTMLInputElement>(null);
 
-//   React.useEffect(() => {
+  React.useEffect(() => {
 
-//     if (props.autoFocus) {
-//       CardContainerRef.current.focus();
-//     }
-//   }, [props.autoFocus]);
+    if (CardContainerRef.current) {
+      CardContainerRef.current.focus();
+    }
+  }, []);
 
   const [
     state,
@@ -65,13 +65,13 @@ export const Card = (props: CardProps) => {
     isFocused: false,
   });
 
-//   const setFocus = isFocused => {
+  const setFocus = (isFocused : any) => {
 
-//     setState(prevState => ({
-//       ...prevState,
-//       isFocused,
-//     }));
-//   };
+    setState(prevState => ({
+      ...prevState,
+      isFocused,
+    }));
+  };
 
   const onClick = () => {
 
@@ -101,7 +101,7 @@ export const Card = (props: CardProps) => {
           id={props.id}
           display={props.cardDisplay}
           automationId={props.automationId}
-        //   ref={CardContainerRef}
+          ref={CardContainerRef}
           padding={props.padding}
           overflow={props.overflow}
           backgroundColor={props.backgroundColor}
@@ -127,13 +127,12 @@ export const Card = (props: CardProps) => {
           focusColor={props.focusColor}
           activeOpacity={props.activeOpacity}
           borderRadius={props.borderRadius}
-        //   tabIndex={props.tabIndex}
-        //   role={props.role}
+          // tabIndex={props.tabIndex}
+          role={props.role}
           onClick={onClick}
-        //   onFocus={() => setFocus(true)}
-        //   onBlur={() => setFocus(false)}
+          // onFocus={() => setFocus(true)}
+          onBlur={() => setFocus(false)}
           >
-
           {props.children}
 
         </CardContainer>

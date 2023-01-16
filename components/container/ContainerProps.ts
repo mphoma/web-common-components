@@ -1,4 +1,4 @@
-export type BaseProps = {
+export type ContainerProps = {
     display?: string,
     width?: string,
     height?: string,
@@ -60,6 +60,16 @@ export type BaseProps = {
     float?: string,
     verticalAlign?: string,
     alignmentBaseline?: string,
-    onClick?: () => any; 
+    headerHoverColor?: string,
+    onClick?: (event: React.MouseEvent<HTMLDivElement>) => void,
     history?: { goBack: () => any } ,
+    rotate?: string,
+    imageUrl?: string,
+    backgroundPosition?: string,
+    subHeading?: string,
+    heading?: string,
+    rotateX?: string,
+    headingColor?: string,
+    subHeadingColor?: string,
+    children?: React.ReactNode
 }
