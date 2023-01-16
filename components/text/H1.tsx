@@ -1,6 +1,6 @@
 import React from 'react'
-import { FontFamilies, FormFactorTypes } from '../common/constants'
-import { withFormFactor } from '../hocs/withFormFactor'
+import { FontFamilies, FormFactorTypes } from '../../common/constants'
+import { withFormFactor } from '../../hocs/withFormFactor'
 import { Text } from './Text'
 import { TextProps } from './TextProps'
 
@@ -8,7 +8,7 @@ const h1 = (props: TextProps) => (
   <Text
     margin='0'
     fontWeight='normal'
-    fontFamily={FontFamilies.ExtraBold}
+    fontFamily={FontFamilies.VodafoneBoldEot}
     fontSize='50px'
     lineHeight='60px'
     letterSpacing='2px'
@@ -50,7 +50,7 @@ const h1Regular = (props: TextProps) => (
     as='h1'
     margin='0'
     fontWeight='normal'
-    fontFamily={FontFamilies.Regular}
+    fontFamily={FontFamilies.VodafoneRegularEot}
     fontSize='50px'
     lineHeight='60px'
     letterSpacing='2px'
@@ -91,7 +91,7 @@ const h1Light = (props: TextProps) => (
     as='h1'
     margin='0'
     fontWeight='normal'
-    fontFamily={FontFamilies.Light}
+    fontFamily={FontFamilies.VodafoneLightEot}
     fontSize='50px'
     lineHeight='60px'
     letterSpacing='2px'

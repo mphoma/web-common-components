@@ -7,8 +7,9 @@ import { VFillContainer, HContainerV } from '../container/Containers'
 import { Image } from '../general/Image'
 import { BodyText } from '../text/BodyText'
 import { NotificationProps } from './NotificationProps'
+import { ContainerProps } from '../container/ContainerProps'
 
-const Container = styled(HContainerV)`
+const Container = styled(HContainerV)<ContainerProps>`
   display: flex;
   padding: ${props => props.padding || '0 6.9vw'};
   min-height: ${props => props.height || '6.6vh'};
@@ -34,8 +35,7 @@ export const Banner = (props:NotificationProps) => {
 
   const parseText = (text:NotificationProps) => {
 
-    let textLines : string[] = []
-    const TextComponent = (props.textLine || BodyText) as React.ElementType
+    let textLines: string[] = [];
 
     if (typeof text !== 'string') {
 
@@ -47,7 +47,8 @@ export const Banner = (props:NotificationProps) => {
     for (const line of text.split('\n')) {
 
       textLines.push(
-       <TextComponent
+
+        <BodyText
           key={`banner-line-${i++}`}
           color={props.color}
           fontSize={props.fontSize}
@@ -55,7 +56,7 @@ export const Banner = (props:NotificationProps) => {
       );
     }
 
-    return <React.Fragment>{textLines}</React.Fragment>;
+    return textLines;
   };
 
   const textLines = parseText(props.text);

@@ -71,5 +71,6 @@ export type ContainerProps = {
     rotateX?: string,
     headingColor?: string,
     subHeadingColor?: string,
-    children?: React.ReactNode
+    children?: React.ReactNode,
+    snackbarPadding?: string,
 }

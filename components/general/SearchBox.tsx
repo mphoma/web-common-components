@@ -166,4 +166,4 @@ export const SearchBox = withFormFactor({
       height: '5.6vh',
     },
   },
-});
+}) as React.ElementType<GeneralProps>;

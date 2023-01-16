@@ -127,10 +127,10 @@ export const Card = (props: CardProps) => {
           focusColor={props.focusColor}
           activeOpacity={props.activeOpacity}
           borderRadius={props.borderRadius}
-          // tabIndex={props.tabIndex}
+          tabIndex={props.tabIndex}
           role={props.role}
           onClick={onClick}
-          // onFocus={() => setFocus(true)}
+          onFocus={() => setFocus(true)}
           onBlur={() => setFocus(false)}
           >
           {props.children}

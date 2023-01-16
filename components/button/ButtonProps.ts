@@ -16,7 +16,7 @@ export type ButtonProps = {
     maxWidth?: string | undefined,
     minHeight?: string | undefined,
     isEnabled?: boolean | undefined,
-    onClick?: (event: React.MouseEvent<HTMLDivElement> | undefined) => void,
+    onClick?: (event: React.MouseEvent<HTMLDivElement>) => void,
     ref?: () => string | undefined,
     history?: { goBack: () => any } | undefined,
     activeColor?: string | undefined,
@@ -67,4 +67,8 @@ export type ButtonProps = {
     imageWidth: string,
     objectFit:string,
     src: string,
+    onSecondaryClick?: (event: React.MouseEvent<HTMLDivElement>) => void,
+    secondaryText?: string,
+    onPrimaryClick?: (event: React.MouseEvent<HTMLDivElement>) => void,
+    primaryText?: string
 }

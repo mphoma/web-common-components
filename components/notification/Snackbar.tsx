@@ -7,16 +7,16 @@ import { Image } from '../general/Image'
 import { BodyText } from '../text/BodyText'
 import { H5 } from '../text/H5'
 import { NotificationProps } from './NotificationProps'
+import { ContainerProps } from '../container/ContainerProps'
+import { GeneralProps } from '../general/GeneralProps'
 
-const Container = styled(HContainer)<NotificationProps>`
+const Container = styled(HContainer)<ContainerProps>`
   display: flex;
-
   position: ${props => props.position || 'absolute'};
   ${props => props.left && `left: ${props.left}`};
   ${props => props.top && `top: ${props.top}`};
   ${props => props.right && `right: ${props.right}`};
   ${props => props.bottom && `bottom: ${props.bottom}`};
-
   box-sizing: border-box;
   pointer-events: none;
   padding: ${props => props.padding || '0 0 4.44vh 2.77vw'};
@@ -25,7 +25,7 @@ const Container = styled(HContainer)<NotificationProps>`
   ${props => props.width && `width: ${props.width};`}
 `;
 
-const SnackbarContainer = styled(HFillContainerV)<NotificationProps>`
+const SnackbarContainer = styled(HFillContainerV)<ContainerProps>`
   pointer-events: auto;
   padding: ${props => props.snackbarPadding || '2.22vh 1.38vw'};
   background-color: ${props => props.backgroundColor || ColorCodes.Green2};
@@ -33,7 +33,7 @@ const SnackbarContainer = styled(HFillContainerV)<NotificationProps>`
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
 `;
 
-const CloseImage = styled(Image)<NotificationProps>`
+const CloseImage = styled(Image)<GeneralProps>`
   min-height: 30px;
   min-width: 30px;
   width: 1.5vmin;

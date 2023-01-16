@@ -147,4 +147,4 @@ export const ProgressBar = withFormFactor({
       fillTransition: null,
     },
   },
-});
+})as React.ElementType<GeneralProps>;

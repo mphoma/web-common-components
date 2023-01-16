@@ -120,4 +120,4 @@ export const PageBanner = withFormFactor({
       height: '9vh',
     },
   },
-});
+}) as React.ElementType<GeneralProps>;

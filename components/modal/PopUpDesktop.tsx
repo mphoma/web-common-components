@@ -13,6 +13,7 @@ import { BodyText } from '../text/BodyText'
 import { H2 } from '../text/H2'
 import { PopUpProps } from './PopUpProps'
 import { Space } from '../general/Space'
+import { ColorSvg } from '../general/ColorSvg'
 
 const Container = styled.div`
   box-sizing: border-box;
@@ -45,13 +46,13 @@ export const PopUpDesktop = (props:PopUpProps) => (
 
     <CloseContainer>
 
-      {/* <ColorSvg
+      <ColorSvg
         src={Images.Icons.Close}
         color={ColorCodes.Grey6}
         onClick={props.onCloseClick}
         height={'2.22vmin'}
         width={'2.22vmin'}
-      /> */}
+      />
 
     </CloseContainer>
 
@@ -65,9 +66,9 @@ export const PopUpDesktop = (props:PopUpProps) => (
             height={'10vh'}
             src={props.icon}/>
 
-          {/* <Space
+          <Space
             height={'4.2vh'}
-          /> */}
+          />
         </React.Fragment>
       }
 
@@ -76,9 +77,9 @@ export const PopUpDesktop = (props:PopUpProps) => (
         text={props.heading}
       />
 
-      {/* <Space
+      <Space
         height={'0.5vh'}
-      /> */}
+      />
 
       <TextList
         component={BodyText}

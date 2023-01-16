@@ -12,6 +12,7 @@ import { BodyText } from '../text/BodyText'
 import { H2 } from '../text/H2'
 import { HSeparator } from '../general/Separator'
 import { PopUpProps } from './PopUpProps'
+import { ColorSvg } from '../general/ColorSvg'
 import { Space } from '../general/Space'
 
 const Container = styled.div`
@@ -46,13 +47,13 @@ export const PopUpTablet = (props:PopUpProps) => (
 
     <CloseContainer>
 
-      {/* <ColorSvg
+      <ColorSvg
         src={Images.Icons.Close}
         color={ColorCodes.Grey6}
         onClick={props.onCloseClick}
         height={'2.22vmin'}
         width={'2.22vmin'}
-      /> */}
+      />
 
     </CloseContainer>
 
@@ -66,9 +67,9 @@ export const PopUpTablet = (props:PopUpProps) => (
             height={'10vh'}
             src={props.icon}/>
 
-          {/* <Space
+          <Space
             height={'4.2vh'}
-          /> */}
+          />
         </React.Fragment>
       }
 
@@ -77,9 +78,9 @@ export const PopUpTablet = (props:PopUpProps) => (
         text={props.heading}
       />
 
-      {/* <Space
+      <Space
         height={'0.5vh'}
-      /> */}
+      />
 
       <TextList
         component={BodyText}

@@ -166,4 +166,4 @@ TabBar.defaultProps = {
   boxShadow: undefined,
 };
 
-TabBar.insights = Insights.with();
+// TabBar.insights = Insights.with();

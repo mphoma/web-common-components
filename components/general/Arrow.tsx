@@ -28,7 +28,7 @@ export const Arrow = (props: GeneralProps) => (
       transition={props.transition}
       rotateX={props.rotateX}>
   
-        {/* <ColorSvg
+        <ColorSvg
           id={props.id}
           automationId={props.automationId}
           src={Images.Icons.Chevron}
@@ -40,7 +40,7 @@ export const Arrow = (props: GeneralProps) => (
           maxWidth={props.maxWidth}
           onClick={props.onClick}
           color={props.color}
-          hoverColor={props.hoverColor}/> */}
+          hoverColor={props.hoverColor}/>
   
     </ArrowContainer>
   );

@@ -12,6 +12,7 @@ import { BodyText } from '../text/BodyText'
 import { H2 } from '../text/H2'
 import { Space } from '../general/Space'
 import { PopUpProps } from './PopUpProps'
+import { ColorSvg } from '../general/ColorSvg'
 
 const Container = styled.div`
   position: relative;
@@ -59,13 +60,13 @@ export const PopUpMobi = (props:PopUpProps) => (
 
     <CloseContainer>
 
-      {/* <ColorSvg
+      <ColorSvg
         src={Images.Icons.Close}
         color={ColorCodes.Grey6}
         onClick={props.onCloseClick}
         height={'4vh'}
         width={'4vh'}
-      /> */}
+      />
 
     </CloseContainer>
 
@@ -79,9 +80,9 @@ export const PopUpMobi = (props:PopUpProps) => (
             height={'10vh'}
             src={props.icon}/>
 
-          {/* <Space
+          <Space
             height={'5.9vh'}
-          /> */}
+          />
         </React.Fragment>
       }
 
@@ -90,9 +91,9 @@ export const PopUpMobi = (props:PopUpProps) => (
         text={props.heading}
       />
 
-      {/* <Space
+      <Space
         height={'2.7vh'}
-      /> */}
+      />
 
       <TextList
         component={BodyText}
@@ -119,9 +120,9 @@ export const PopUpMobi = (props:PopUpProps) => (
 
         <React.Fragment>
 
-          {/* <Space
+          <Space
             height={'3.2vh'}
-          /> */}
+          />
 
           <TextButton
             activeColor={ColorCodes.Grey7}
