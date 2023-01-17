@@ -1,16 +1,12 @@
-import React, {
-    useState,
-    useEffect,} from 'react'
+import React, { useEffect,} from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { withFormFactor } from '../../hocs/withFormFactor'
-import { ColorCodes, Images, FormFactorTypes } from '../../common/constants'
-import { H4Regular } from '../text/H4'
+import { ColorCodes, Images, FormFactorTypes, FontFamilies,FontSizes } from '../../common/constants'
 import { GeneralProps } from './GeneralProps'
-import { Pill } from './Pill'
-import { HContainer,
-    HContainerV,
-    HFillContainer, } from '../container/Containers'
+import {  HFillContainer } from '../container/Containers'
+import { ColorSvg } from './ColorSvg'
+import { Debounceable } from '../../common/utils'
 
     const Container = styled(HFillContainer)`
   width: ${props => props.width};
@@ -34,7 +30,7 @@ const SearchField = styled.input<GeneralProps>`
   margin-bottom: 0;
   font-size: ${FontSizes.Smaller};
   color: ${ColorCodes.Black};
-  font-family: ${FontFamilies.Light}, serif;
+  font-family: ${FontFamilies.VodafoneLightEot}, serif;
   border: none;
   outline: none;
 
@@ -55,7 +51,7 @@ const searchBox = (
   const search = new Debounceable();
 
   const debounceSearch = search.debounce((
-    searchText
+    searchText : string
   ) => {
 
     typeof props.onSubmit === 'function' && props.onSubmit({
@@ -65,7 +61,7 @@ const searchBox = (
   props.debounceWait);
 
   const onSearchTextChanged = (
-    e
+    e : GeneralProps
   ) => {
 
     if (!e || !e.target || typeof e.target.value !== 'string') {

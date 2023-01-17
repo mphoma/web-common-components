@@ -51,4 +51,4 @@ export const ContainedButton = withFormFactor({
       focusBoxShadow: `0 0 0 1px ${ColorCodes.Red1}`,
     },
   },
-});
+})as React.ElementType<ButtonProps>;

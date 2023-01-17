@@ -33,6 +33,7 @@ const CloseContainer = styled.div`
   top: 3vmin;
   right: 3vmin;
 `;
+
 const Buttons = styled.div<PopUpProps>`
   display: flex;
   justify-content: ${props => props.justifyContent || 'flex-end'};
@@ -102,9 +103,9 @@ export const PopUpDesktop = (props:PopUpProps) => (
             { props.onBackClick &&
 
               <BackButton
-                text={'BACK'}
-                onClick={props.onBackClick}
-              />
+            text={'BACK'}
+            onClick={props.onBackClick} 
+             />
             }
 
             <HFillContainer/>

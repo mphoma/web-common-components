@@ -1,18 +1,11 @@
-import React, {
-    useState,
-    useEffect,} from 'react'
+import React  from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import { withFormFactor } from '../../hocs/withFormFactor'
-import { ColorCodes, Images, FormFactorTypes } from '../../common/constants'
-import { H4Regular } from '../text/H4'
+import { ColorSvg } from './ColorSvg'
+import { ColorCodes, Images } from '../../common/constants'
 import { GeneralProps } from './GeneralProps'
-import { Pill } from './Pill'
-import { HContainer,
-    HContainerV,
-    HFillContainer, } from '../container/Containers'
 
-    export const Rating = (props : GeneralProps) => {
+
+    export const Rating = (props : GeneralProps) : JSX.Element[] => {
 
         if (props.maxRating < props.rating) {
           return [];

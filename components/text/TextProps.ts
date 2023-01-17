@@ -31,5 +31,5 @@ export type TextProps = {
   wordBreak?: string
   wordWrap?: string,
   key?:string,
-  children?: React.ReactNode
+  children?: React.ReactNode,
 }

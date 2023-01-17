@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ColorCodes } from '../../common/constants'
+import { transparent } from '../../common/utils'
 
 interface CircleImageProps {
     imageUrl?: string,

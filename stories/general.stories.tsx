@@ -28,11 +28,11 @@ export default {
          LeftArrow,
           DownArrow ,
          RightArrow,
-        //   SearchBox,
+          SearchBox,
            HSeparator, 
            Link,
             CircleImage ,
-            //  ProgressBar
+             ProgressBar
             }
     } as ComponentMeta<typeof PageBanner> 
 
@@ -44,14 +44,8 @@ width={'100vw'}
       subHeadingColor={ColorCodes.White} />;
 ImageI.storyName = 'Page Banner';
 
-//     export const Image2: ComponentStory<typeof Image> = () => <Image 
-//     src={Images.Backgrounds.Banner}
-//     width={'50vw'}
-//     height={'auto'} />;
-// Image2.storyName = 'Image';
-
-// export const Image3: ComponentStory<typeof PageBanner> = () => <Spinner size={'60'} />;
-// Image3.storyName = 'Spinner';
+export const Image3: ComponentStory<typeof PageBanner> = () => <Spinner size={'60'} />;
+Image3.storyName = 'Spinner';
 
 export const ImageII: ComponentStory<typeof PageBanner> = () => <UpArrow size={'20px'}/>;
 ImageII.storyName = 'Up Arrow';
@@ -64,9 +58,6 @@ Image6.storyName = 'Left Arrow';
 
 export const Image7: ComponentStory<typeof PageBanner> = () => <RightArrow size={'20px'}/>;
 Image7.storyName = 'Right Arrow';
-
-export const Image8: ComponentStory<typeof PageBanner> = () => <SearchBox/>;
-Image8.storyName = 'Search Box';
 
 export const Image9: ComponentStory<typeof PageBanner> = () => <HSeparator/>;
 Image9.storyName = 'Separator';
@@ -98,6 +89,17 @@ tabs={[{
   onTabClicked={action('tab-click')}
   />;
 Image13.storyName = 'Tab Bar';
+
+    export const Image2: ComponentStory<typeof Image> = () => <Image 
+    src={Images.Backgrounds.Banner}
+    width={'50vw'}
+    height={'auto'} />;
+Image2.storyName = 'Image';
+
+
+export const Image8: ComponentStory<typeof PageBanner> = () => <SearchBox/>;
+Image8.storyName = 'Search Box';
+
 
 // export const Image15: ComponentStory<typeof Image> = () => <Rating/>;
 // Image15.storyName = 'Rating';
